@@ -10,7 +10,7 @@
     <li>Delete user account: Allows users to delete their account and associated data from the database.</li>
     <li>Email Authentication: Sends one time email verification link on Signup.</li>
     <li>Use an API testing tool ( Postman ) to interact with the API endpoints.</li>
-    <li>Verification html files are served by api.</li>
+    <li>Email verification html files are served by api.</li>
 </ul>
 
 <h1>API Endpoints</h1>
@@ -75,7 +75,7 @@
 
 <li>Request</li>
 
-<p>( 'data' object may contain any information of username, email or password. )</p>
+<p>( "data" object may contain any information of username, email or password. )</p>
 
 ```json
     {
