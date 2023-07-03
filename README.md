@@ -1,6 +1,6 @@
 # Authentication-CRUD-api
 
-<p>This is a sample CRUD (Create, Read, Update, Delete) API for user authentication, built using Express.js and MongoDB. The API provides endpoints to manage user accounts, including signup, login, email verification and basic user profile operations.</p>
+<p>This is a CRUD (Create, Read, Update, Delete) API for user authentication and email verification, built using Express.js and MongoDB. The API provides endpoints to manage user accounts, including signup, login, email verification and basic user profile operations.</p>
 
 <h1>Features</h1>
 <ul>
