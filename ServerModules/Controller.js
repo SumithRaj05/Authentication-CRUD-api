@@ -82,7 +82,7 @@ exports.EmailAuthentication = async (req, res) => {
         })
 
         return res.status(200).json({
-            status: "Sent Email"
+            status: "Email verification link sent"
         })
     } catch (err) {
         res.status(404).json({
@@ -168,15 +168,7 @@ exports.UserLogin = async (req, res) => {
 
 exports.UpdateUser = async (req, res) => {
     try {
-        const { username, data } = req.body;
-
-        // format of data must be:
-        //     {
-        //         username: "current user",
-        //         data:{
-        //             (new data)
-        //         }
-        //     }
+        const { username, data } = req.body
 
         if (data.username) {
             await users.findOneAndUpdate({ UserName: username }, { UserName: data.username })
@@ -189,7 +181,7 @@ exports.UpdateUser = async (req, res) => {
         }
 
         return res.status(200).json({
-            status: "Updated"
+            status: 200
         })
     } catch {
         res.status(404).json({

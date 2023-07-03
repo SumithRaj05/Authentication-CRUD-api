@@ -10,6 +10,7 @@
     <li>Delete user account: Allows users to delete their account and associated data from the database.</li>
     <li>Email Authentication: Sends one time email verification link on Signup.</li>
     <li>Use an API testing tool ( Postman ) to interact with the API endpoints.</li>
+    <li>Verification html files are served by api.</li>
 </ul>
 
 <h1>API Endpoints</h1>
@@ -20,4 +21,100 @@
     <li>PATCH /profile/update: Updates the profile information for the authenticated user.</li>
     <li>DELETE /profile/delete: Deletes the account for the user.</li>
     <li>POST /verify/:id: Verification Link in email.</li>
+</ul>
+
+<h1>Request Operations Formatting</h1>
+
+## Signup
+<ul>
+
+<li>Request</li>
+
+```json
+    {
+        username: 'user name',
+        email: 'example@gmail.com',
+        password: 'user password'
+    }
+```
+
+<li>Response</li>
+
+```json
+    {
+        status: "Email verification link sent"
+    }
+```
+</ul>
+
+## Login
+<ul>
+
+<li>Request</li>
+
+```json
+    {
+        email: 'example@gmail.com',
+        password: 'user password'
+    }
+```
+
+<li>Response</li>
+
+```json
+    {
+        status: 200,
+        username: 'username'
+    }
+```
+
+</ul>
+
+## Update
+<ul>
+
+<li>Request</li>
+
+<p>( 'data' object may contain any information of username, email or password. )</p>
+
+```json
+    {
+        username: 'current user name',
+        data: {
+            username: 'new username',
+            email: 'new email',
+            password: 'new password'
+        }
+    }
+```
+
+<li>Response</li>
+
+```json
+    {
+        status: 200
+    }
+```
+
+</ul>
+
+## Delete
+<ul>
+
+<li>Request</li>
+
+```json
+    {
+        username: 'user name'
+    }
+```
+
+<li>Response</li>
+
+```json
+    {
+        status: 'Deleted Account'
+    }
+```
+
 </ul>
