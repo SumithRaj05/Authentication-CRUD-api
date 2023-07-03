@@ -113,7 +113,7 @@
 
 ```json
     {
-        "status": "Deleted Account"
+        "status": 200
     }
 ```
 

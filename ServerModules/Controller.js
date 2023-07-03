@@ -197,7 +197,7 @@ exports.DeleteUser = async (req, res) => {
         await users.findOneAndDelete({ UserName: username })
 
         return res.status(200).json({
-            status: "Deleted Account"
+            status: 200
         })
     } catch (err) {
         res.status(404).json({
