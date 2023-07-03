@@ -9,7 +9,7 @@ const port = 5000 || process.env.PORT;
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
-app.use('/users', UserRoutes)
+app.use('/profile', UserRoutes)
 app.use('/verify', VerifyRoutes)
 
 app.listen(port, (err) => {
