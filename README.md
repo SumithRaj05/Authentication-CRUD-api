@@ -32,9 +32,9 @@
 
 ```json
     {
-        username: 'user name',
-        email: 'example@gmail.com',
-        password: 'user password'
+        "username": "user name",
+        "email": "example@gmail.com",
+        "password": "user password"
     }
 ```
 
@@ -42,7 +42,7 @@
 
 ```json
     {
-        status: "Email verification link sent"
+        "status": "Email verification link sent"
     }
 ```
 </ul>
@@ -54,8 +54,8 @@
 
 ```json
     {
-        email: 'example@gmail.com',
-        password: 'user password'
+        "email": "example@gmail.com",
+        "password": "user password"
     }
 ```
 
@@ -63,8 +63,8 @@
 
 ```json
     {
-        status: 200,
-        username: 'username'
+        "status": 200,
+        "username": "user name"
     }
 ```
 
@@ -79,11 +79,11 @@
 
 ```json
     {
-        username: 'current user name',
-        data: {
-            username: 'new username',
-            email: 'new email',
-            password: 'new password'
+        "username": "current user name",
+        "data": {
+            "username": "new username",
+            "email": "new email",
+            "password": "new password"
         }
     }
 ```
@@ -92,7 +92,7 @@
 
 ```json
     {
-        status: 200
+        "status": 200
     }
 ```
 
@@ -105,7 +105,7 @@
 
 ```json
     {
-        username: 'user name'
+        "username": "user name"
     }
 ```
 
@@ -113,7 +113,7 @@
 
 ```json
     {
-        status: 'Deleted Account'
+        "status": "Deleted Account"
     }
 ```
 
