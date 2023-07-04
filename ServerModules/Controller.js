@@ -6,6 +6,8 @@ const EmailVerify = require('./Model').EmailVerify
 
 dotenv.config()
 
+const salt = await bcrypt.genSalt()
+
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -110,7 +112,6 @@ exports.UserSignup = async (req, res, next) => {
             })
         }
 
-        const salt = await bcrypt.genSalt()
         const hashedPwd = await bcrypt.hash(password, salt)
 
         const Data = await users.create({
@@ -174,10 +175,11 @@ exports.UpdateUser = async (req, res) => {
             await users.findOneAndUpdate({ UserName: username }, { UserName: data.username })
         }
         if (data.email) {
-            await users.findOneAndUpdate({ UserName: username }, { Email: data.email })
+            await users.findOneAndUpdate({ UserName: username }, { Email: data.email, isVerified: false })
         }
         if (data.password) {
-            await users.findOneAndUpdate({ UserName: username }, { Password: data.password })
+            const hashedPwd = await bcrypt.hash(data.password, salt)
+            await users.findOneAndUpdate({ UserName: username }, { Password: hashedPwd })
         }
 
         return res.status(200).json({
