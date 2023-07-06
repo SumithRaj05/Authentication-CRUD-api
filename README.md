@@ -16,11 +16,12 @@
 <h1>API Endpoints</h1>
 <p>The following API endpoints are available:</p>
 <ul>
+    <li>GET /profile/:username : Featches user details from param username.</li>
     <li>POST /profile/signup: Creates a new user account.</li>
     <li>POST /profile/login: Authenticates the user.</li>
     <li>PATCH /profile/update: Updates the profile information for the authenticated user.</li>
     <li>DELETE /profile/delete: Deletes the account for the user.</li>
-    <li>POST /verify/:id: Verification Link in email.</li>
+    <li>POST /verify/:id : Verification Link in email.</li>
 </ul>
 
 <h1>Request Operations Formatting</h1>
@@ -64,7 +65,27 @@
 ```json
     {
         "status": 200,
-        "username": "user name"
+        "data": {
+            "username": "user name",
+            "email": "example@gmail.com"
+        }
+    }
+```
+
+</ul>
+
+## Get User
+<ul>
+
+<li>Response</li>
+
+```json
+    {
+        "status": 200,
+        "data": {
+            "username": "user name",
+            "email": "example@gmail.com"
+        }
     }
 ```
 

@@ -34,6 +34,32 @@ exports.Get = (req, res) => {
     }
 }
 
+exports.GetUser = async (req, res) => {
+    try {
+        const username = req.params.username
+        var Data = await users.findOne({ UserName: username })
+
+        if (!Data.isVerified) {
+            return res.status(203).json({
+                status: "User is not verified"
+            })
+        }
+
+        return res.status(200).json({
+            status: 200,
+            data: {
+                username: Data.UserName,
+                emil: Data.Email
+            }
+        })
+    } catch (err) {
+        res.status(404).json({
+            status: "User not found"
+        })
+    }
+}
+
+
 exports.VerifyLink = async (req, res) => {
     try {
         const EmailData = await EmailVerify.findOneAndDelete({ UserId: req.params.id })
@@ -157,7 +183,10 @@ exports.UserLogin = async (req, res) => {
 
         return res.status(200).json({
             status: 200,
-            username: Data.UserName
+            data: {
+                username: Data.UserName,
+                email: Data.Email
+            }
         })
 
     } catch (err) {

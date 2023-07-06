@@ -3,7 +3,7 @@ const bodyParser = require('body-parser')
 const { UserRoutes, VerifyRoutes } = require('./ServerModules/Router')
 
 const app = express()
-const port = 5000 || process.env.PORT;
+const port = 3000 || process.env.PORT;
 
 // Middlewares
 app.use(bodyParser.json())

@@ -6,6 +6,7 @@ const VerifyRoutes = express.Router()
 
 UserRoutes
     .get('/', Controller.Get)
+    .get('/:username', Controller.GetUser)
     .post('/login', Controller.UserLogin)
     .post('/signup', Controller.UserSignup, Controller.EmailAuthentication)
     .patch('/update', Controller.UpdateUser)
