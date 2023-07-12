@@ -178,7 +178,7 @@ exports.UserSignup = async (req, res, next) => {
     }
 }
 
-// post request at /profile/login to recieve JWT token
+// post request at /prouniquefile/login to recieve JWT token
 exports.UserLogin = async (req, res) => {
     try {
         const { email, password } = req.body
@@ -217,9 +217,7 @@ exports.UserLogin = async (req, res) => {
 
         return res.status(200).json({
             status: 200,
-            data: {
-                token: Token
-            }
+            token: Token
         })
 
     } catch (err) {
