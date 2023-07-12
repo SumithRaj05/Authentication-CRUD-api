@@ -6,13 +6,13 @@ const VerifyRoutes = express.Router()
 
 UserRoutes
     .get('/', Controller.Get)
-    .get('/:username', Controller.GetUser)
+    .get('/userdata', Controller.GetUser)
     .post('/login', Controller.UserLogin)
     .post('/signup', Controller.UserSignup, Controller.EmailAuthentication)
     .patch('/update', Controller.UpdateUser)
     .delete('/delete', Controller.DeleteUser)
 
 VerifyRoutes
-    .post('/:id', Controller.VerifyLink)
+    .get('/:id', Controller.VerifyLink)
 
 module.exports = { UserRoutes, VerifyRoutes }

@@ -12,15 +12,18 @@ mongoose.connect(DataBase, { useNewUrlParser: true }).then((con) => {
 })
 
 const UserSchema = new mongoose.Schema({
-    UserName: {
+    FullName: {
         type: String,
-        required: [true, "Name is required"],
-        unique: true
+        required: [true, "Name is required"]
     },
     Email: {
         type: String,
         required: [true, "Email is required"],
         unique: true
+    },
+    MobileNumber: {
+        type: String,
+        required: [true, "Number is required"]
     },
     Password: {
         type: String,
@@ -30,7 +33,7 @@ const UserSchema = new mongoose.Schema({
         type: Date,
         default: Date.now()
     },
-    isVerified: Boolean
+    isVerifiedEmail: Boolean
 })
 
 const EmailVerifySchema = new mongoose.Schema({

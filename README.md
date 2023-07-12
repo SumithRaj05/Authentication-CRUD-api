@@ -43,7 +43,8 @@
 
 ```json
     {
-        "status": "Email verification link sent"
+        "status": 200,
+        "content": "Email verification link sent"
     }
 ```
 </ul>
@@ -113,7 +114,8 @@
 
 ```json
     {
-        "status": 200
+        "status": 200,
+        "content": "User updated"
     }
 ```
 
@@ -134,7 +136,8 @@
 
 ```json
     {
-        "status": 200
+        "status": 200,
+        "content": "User deleted"
     }
 ```
 
