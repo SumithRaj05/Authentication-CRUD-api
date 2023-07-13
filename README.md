@@ -19,12 +19,12 @@
 <h1>API Endpoints</h1>
 <p>The following API endpoints are available:</p>
 <ul>
-    <li>GET /profile/userdata: Featches user details from token provided.</li>
-    <li>POST /profile/signup: Creates a new user account and sends verification link to provided email.</li>
-    <li>POST /profile/login: Authenticates the user and provides JWT token.</li>
-    <li>PATCH /profile/update: Updates the profile information for the user and returns updated token.</li>
-    <li>DELETE /profile/delete: Deletes the account for the user.</li>
-    <li>GET /verify/:id : Verification Link in email.</li>
+    <li>GET <bold>/profile/userdata</bold> : Featches user details from token provided.</li>
+    <li>POST <bold>/profile/signup</bold> : Creates a new user account and sends verification link to provided email.</li>
+    <li>POST <bold>/profile/login</bold> : Authenticates the user and provides JWT token.</li>
+    <li>PATCH <bold>/profile/update</bold> : Updates the profile information for the user and returns updated token.</li>
+    <li>DELETE <bold>/profile/delete</bold> : Deletes the account for the user.</li>
+    <li>GET <bold>/verify/:id</bold> : Verification Link in email.</li>
 </ul>
 
 <h1>JsonWebToken Header Formatting</h1>
@@ -141,3 +141,7 @@
 ```
 
 </ul>
+
+<h1>Contribution</h1>
+<p>We value and appreciate contributions from the community, whether it's fixing a bug, adding a new feature, improving documentation, or suggesting enhancements. </p>
+
